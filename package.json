@@ -1,7 +1,7 @@
 {
   "name": "gerar-pdf",
   "version": "1.0.0",
-  "description": "* [] Pq eu preciso exportar um PDF? * [] Existem outras ferramentas? * [] Pq eu vou usar o NodeJS?",
+  "description": "Simples PDDF",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
