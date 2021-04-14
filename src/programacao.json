@@ -1,0 +1,178 @@
+{
+    "dataInicio": "23/05/2021",
+    "dataFim": "30/05/2021",
+    "cnpj": "14.628.190/0001-09",
+    "nomeInstituicao": "Igreja de Cristo",
+    "endereco": {
+        "logradouro": "Rua Raimundo Correia Viana",
+        "numero": "89",
+        "bairro": "São José",
+        "cidade": "Portalegre",
+        "uf": "RN",
+        "cep": "59.810-000",
+        "cnpj": "62.382.407/0001-88"
+    },
+    "eventos": [{
+            "dia": "Segunda",
+            "eventosDoDia": [{
+                    "horario": "19:00",
+                    "nome": "Oração 1 e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                },
+                {
+                    "horario": "19:00",
+                    "nome": "Oração 2 e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                },
+                {
+                    "horario": "22:00",
+                    "nome": "Vigilia na ponta da serra",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                }
+            ]
+        },
+        {
+            "dia": "Terça",
+            "eventosDoDia": [{
+                    "horario": "19:00",
+                    "nome": "Oração e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                },
+                {
+                    "horario": "19:00",
+                    "nome": "Oração e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                }
+            ]
+        }, {
+            "dia": "Quarta",
+            "eventosDoDia": [{
+                "horario": "19:00",
+                "nome": "Oração e Escola Biblica",
+                "nomeDirigente": "Claudio Rodrigo",
+                "nomePalestrante": "Marcion Gleiton",
+                "nomePorteiro": "Marcos Bessa",
+                "nomeLeitor": "Joaquin Oliveira"
+            }]
+        },
+        {
+            "dia": "Quinta",
+            "eventosDoDia": [{
+                "horario": "19:00",
+                "nome": "Oração e Escola Biblica",
+                "nomeDirigente": "Claudio Rodrigo",
+                "nomePalestrante": "Marcion Gleiton",
+                "nomePorteiro": "Marcos Bessa",
+                "nomeLeitor": "Joaquin Oliveira"
+            }]
+        },
+        {
+            "dia": "Sexta",
+            "eventosDoDia": [{
+                    "horario": "19:00",
+                    "nome": "Oração e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                },
+                {
+                    "horario": "19:00",
+                    "nome": "Oração e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                }
+            ]
+        },
+        {
+            "dia": "Sabado",
+            "eventosDoDia": [{
+                    "horario": "19:00",
+                    "nome": "Sabado e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                },
+                {
+                    "horario": "19:00",
+                    "nome": "Oração e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                }
+            ]
+        },
+        {
+            "dia": "Domingo",
+            "eventosDoDia": [{
+                    "horario": "08:00",
+                    "nome": "Oração e Escola Biblica",
+                    "nomeDirigente": "Claudasdaasdadaio sa asdaasdasdacasdasda sadsasdfsddasdaasdasd Rodrigo de Messfdsdfdfsdfsdfsdeiros",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                },
+                {
+                    "horario": "14:00",
+                    "nome": "Oração e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                },
+                {
+                    "horario": "16:00",
+                    "nome": "Oração e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                },
+                {
+                    "horario": "19:00",
+                    "nome": "Oração e Escola Biblica",
+                    "nomeDirigente": "Claudio Rodrigo",
+                    "nomePalestrante": "Marcion Gleiton",
+                    "nomePorteiro": "Marcos Bessa",
+                    "nomeLeitor": "Joaquin Oliveira"
+                }
+            ]
+        }
+    ],
+    "informacoesComplementares": [{
+            "titulo": "RECEPÇÃO DE SABADO E DOMINGO",
+            "descricao": "Rafaela na Congregação e Linara na Sede."
+        },
+        {
+            "titulo": "ZELADORAS",
+            "descricao": "Irmã Rafaela (sede) e Edvânia (congregação)."
+        },
+        {
+            "titulo": "AGENDA PASTORAL",
+            "descricao": "Sabádo o pastor irá viajar para Taboleiro Grande."
+        }
+    ],
+    "responsavel": {
+        "nome": "Antonio Josinilton Ferreira Pinheiro Freire",
+        "cargo": "Pastor"
+    }
+}

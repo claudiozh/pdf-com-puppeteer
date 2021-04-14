@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação semanal de cultos</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            page-break-inside: auto;
+            width: 100%;
+        }
+
+
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            font-size: 11px;
+            text-align: left;
+            padding: 3px 5px;
+            background: #fff;
+        }
+
+        td {
+            overflow: hidden;
+            max-width: 300px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        tr {
+            background: #fff;
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        th {
+            background: #eee;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        tfoot th {
+            text-align: center;
+        }
+
+        .title-instituicao {
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .title-data-programacao {
+            color: #1f4e79;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            padding: 5px
+        }
+
+        .container-logo {
+            float: left;
+        }
+
+        .logo {
+            width: 40px;
+        }
+
+        .endereco {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 12px
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .teste tr {
+            text-align: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="container-logo">
+            <img class="logo"
+                src="http://3.bp.blogspot.com/-VrhumEJ5ad0/TpHHhHbN3mI/AAAAAAAAAqo/08mDgxv0JME/s1600/Igreja_de_Cristo.PNG"
+                alt="">
+        </div>
+        <div class="title-instituicao">
+            <%= programacao.nomeInstituicao %>
+            <%= programacao.endereco.cidade %> -
+            <%= programacao.endereco.uf %>
+
+            <div class="endereco">
+                <%= programacao.endereco.logradouro %>,
+                <%= programacao.endereco.numero %>,
+                <%= programacao.endereco.bairro %>,
+                <%= programacao.endereco.cidade %>/<%= programacao.endereco.uf %>,
+                CEP: <%= programacao.endereco.cep %>,
+                CNPJ: <%= programacao.endereco.cnpj %>
+            </div>
+        </div>
+        <div class="title-data-programacao">
+            Programação de <%= programacao.dataInicio %> à <%= programacao.dataFim %>
+        </div>
+
+        <table>
+
+            <% if(programacao.eventos.length > 0) { %>
+            <% programacao.eventos.forEach((evento) => { %>
+
+            <tr>
+                <th width="70"><%= evento.dia %></th>
+                <th>Evento</th>
+                <th>Dirigente</th>
+                <th>Leitura</th>
+                <th>Palavra</th>
+                <th>Porteiro(a)</th>
+            </tr>
+
+
+            <% if(evento.eventosDoDia.length > 0) { %>
+            <% evento.eventosDoDia.forEach((evtDia) => { %>
+
+            <tr>
+                <td><%= evtDia.horario %></td>
+                <td><%= evtDia.nome %></td>
+                <td><%= evtDia.nomeDirigente %></td>
+                <td><%= evtDia.nomeLeitor %></td>
+                <td><%= evtDia.nomePalestrante %></td>
+                <td><%= evtDia.nomePorteiro %></td>
+            </tr>
+
+            <% }); %>
+            <% } %>
+
+            <% }); %>
+            <% } %>
+
+            <tr>
+                <th colspan="6" class="text-center">
+                    INFORMAÇÕES COMPLEMENTARES
+                </th>
+            </tr>
+
+            <% if(programacao.informacoesComplementares.length > 0) { %>
+            <% programacao.informacoesComplementares.forEach((info) => { %>
+
+            <tr>
+                <td colspan="6">
+                    <strong><%= info.titulo %> :</strong> <%= info.descricao %>
+                </td>
+            </tr>
+
+            <% }); %>
+            <% } %>
+
+        </table>
+
+        <div class="footer">
+            <strong> <%= programacao.responsavel.nome %> </strong>
+            <div style="font-size: 10px"> <%= programacao.responsavel.cargo %></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação semanal de cultos</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 10;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container-main {
+            padding: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            font-size: 11px;
+            text-align: left;
+            padding: 5px;
+            background: #fff;
+        }
+
+        tr {
+            background: #fff;
+        }
+
+        th {
+            background: #eee;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .title-instituicao {
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .title-data-programacao {
+            color: #1f4e79;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+            padding: 5px
+        }
+
+        .container-logo {
+            float: left;
+        }
+
+        .logo {
+            width: 40px
+        }
+
+        .endereco {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 12px
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-main">
+        <div class="container-logo">
+            <img class="logo"
+                src="http://3.bp.blogspot.com/-VrhumEJ5ad0/TpHHhHbN3mI/AAAAAAAAAqo/08mDgxv0JME/s1600/Igreja_de_Cristo.PNG"
+                alt="">
+        </div>
+        <div class="title-instituicao">
+            Igreja de Cristo Portalegre - RN
+            <div class="endereco">
+                Rua Raimundo Correia Viana, 89, Bairro São José, Portalegre/RN, CEP: 59.810-000, CNPJ:14.628.190/0001-09
+            </div>
+        </div>
+        <div class="title-data-programacao">
+            Programação de 21/07/2021 à 30/07/2021
+        </div>
+
+        <table>
+            <tr>
+                <th width="70">Segunda</th>
+                <th>Evento</th>
+                <th>Dirigente</th>
+                <th>Leitura</th>
+                <th>Palavra</th>
+                <th>Porteiro</th>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>ORAÇÃO E ESCOLA BIBLICA NA SEDE
+                </td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Culto de senhoras</td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Culto de senhoras</td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Culto de senhoras</td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+
+            <tr>
+                <th width="70">Quarta</th>
+                <th>Evento</th>
+                <th>Dirigente</th>
+                <th>Leitura</th>
+                <th>Palavra</th>
+                <th>Porteiro</th>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>ORAÇÃO E ESCOLA BIBLICA NA SEDE
+                </td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Culto de senhoras</td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+
+            <tr>
+                <th width="70">Terça</th>
+                <th>Evento</th>
+                <th>Dirigente</th>
+                <th>Leitura</th>
+                <th>Palavra</th>
+                <th>Porteiro</th>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>ORAÇÃO E ESCOLA BIBLICA NA SEDE
+                </td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Culto de senhoras</td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+
+            <tr>
+                <th width="70">Quinta</th>
+                <th>Evento</th>
+                <th>Dirigente</th>
+                <th>Leitura</th>
+                <th>Palavra</th>
+                <th>Porteiro</th>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>ORAÇÃO E ESCOLA BIBLICA NA SEDE
+                </td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Culto de senhoras</td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+
+            <tr>
+                <th width="70">Sexta</th>
+                <th>Evento</th>
+                <th>Dirigente</th>
+                <th>Leitura</th>
+                <th>Palavra</th>
+                <th>Porteiro</th>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>ORAÇÃO E ESCOLA BIBLICA NA SEDE
+                </td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Culto de senhoras</td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+
+            <tr>
+                <th width="70">Sabado</th>
+                <th>Evento</th>
+                <th>Dirigente</th>
+                <th>Leitura</th>
+                <th>Palavra</th>
+                <th>Porteiro</th>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>ORAÇÃO E ESCOLA BIBLICA NA SEDE
+                </td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Culto de senhoras</td>
+                <td>Claudio Rodrigo</td>
+                <td>Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+
+            <tr>
+                <th width="70">Domingo</th>
+                <th>Evento</th>
+                <th>Dirigente</th>
+                <th>Leitura</th>
+                <th>Palavra</th>
+                <th>Porteiro</th>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>ORAÇÃO E ESCOLA BIBLICA NA SEDE </td>
+                <td>Claudio Rodrigo</td>
+                <td>Diacono Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>ORAÇÃO E ESCOLA BIBLICA NA SEDE </td>
+                <td>Claudio Rodrigo</td>
+                <td>Diacono Marcio</td>
+                <td>Pr Josinilton</td>
+                <td>Diac. Franklyn</td>
+            <tr>
+
+            <tr>
+                <th colspan="6" style="text-align:center">INFORMAÇÕES COMPLEMENTARES</th>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <strong>RECEPÇÃO DE SÁBADO E DOMINGO:</strong> Rafaela na Congregação e Linara na Sede.
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <strong>ZELADORAS:</strong> Irmã Rafaela (sede) e Edvânia (congregação).
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+
+            <strong>
+                Antonio Josinilton Ferreira Pinheiro
+            </strong>
+
+            <div style="font-size: 10px;">
+                Pastor
+            </div>
+        </div>
+    </div>
+</body>
+
+</html> -->
